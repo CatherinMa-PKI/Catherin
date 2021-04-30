@@ -8,7 +8,7 @@
 ### 方法三：通过写stream的方式写修改后的表格
 建议比较小的表格使用这个方法，因为stream是写全张表。首先需要有一张原始表，然后复制原始表为新表dt2用来前台展示和mark，mark的数据修改完之后存在dt3，然后把dt3的数据给替换到dt2。
 
-///
+```
 from Spotfire.Dxp.Data import *
 import clr
 clr.AddReference('System')
@@ -71,9 +71,7 @@ dt = Document.Data.Tables["数据表"].ReplaceData(fs)
 
 #重置
 markedata = list()
-
-///
-
+```
 
 
 
